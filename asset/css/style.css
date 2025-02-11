@@ -1,0 +1,78 @@
+ * {
+    box-sizing: border-box;
+ }
+ html {
+    font-size: 62.5%;
+ }
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+/*class dung chung*/
+a {
+    text-decoration: none;
+}
+.content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 24.5px;
+    background: #171100;
+    display: inline-block;
+    padding: 0 16px;
+    line-height: 50px;
+    min-width: 118px;
+}
+.fixed {
+    position: sticky;
+    top: -28px
+}
+.header {
+ background-color: #FFFCF4;
+}
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
+}
+.nav {
+    margin-left: auto;
+}
+.nav ul {
+    display: flex;
+}
+.nav a {
+    position: relative;
+    color: #5F5B53;
+    font-size: 1.6rem;
+    padding: 8px 21px;
+}
+.nav a:hover,
+.nav li.active a {
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+.nav li.active a::after{
+    content: "";
+    bottom: 6px;
+    left: 21px;
+    display:block;
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
+    position: absolute;
+}
+.action .sign-up-btn{
+  min-width: 144px;
+}
+.header .action {
+    margin-left: 49px;
+}
