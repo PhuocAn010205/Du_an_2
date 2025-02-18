@@ -193,9 +193,9 @@
                                 <p class="title">Peter Moor</p>
                                 <p class="desc">Student of Web Design</p>
                                 <div class="dots">
-                                    <span class="dot active"></span>
-                                    <span class="dot "></span>
-                                    <span class="dot"></span>
+                                    <span class="dot active" onclick="changeTestimonial(0)"></span>
+                                    <span class="dot "onclick="changeTestimonial(1)" ></span>
+                                    <span class="dot" onclick="changeTestimonial(2)" ></span>
                                 </div>
                             </img>
                         </div>
@@ -254,7 +254,7 @@
                 </div>
             </div>
         </div>
-        <!--Features-->
+        <!--Features 1-->
         <div class="features">
             <div class="content">
                 <div class="body">
@@ -273,6 +273,40 @@
                 </div>
             </div>
         </div>
+   <!--Features 2-->
+        <div class="features features-2nd">
+            <div class="content">
+                <div class="body">
+                    <div class="images">
+                        <img src="./asset/img/anh2.png" alt="Learner outcomes through our awesome platform">
+                    </div>
+                    <div class="contents">
+                        <h2 class="heading lv2">Take the next step toward your personal and professional goals with Lesson.</h2>
+                        <p class="desc">Take the next step toward. Join now to receive personalized  and more recommendations from the full Coursera catalog.
+                        </p>
+                        <a href="#!" class="btn cta-btn">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
+<script>
+    let currentIndex = 0;
+    const feedbackList= document.querySelector('.feedback-list');
+    const dots = document.querySelectorAll('.dot');
+
+    function changeTestimonial(index) {
+        currentIndex = index;
+        feedbackList.style.transform = `translateX(-${index * 100}%)`;
+        
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+    }
+    setInterval(() => {
+    currentIndex = (currentIndex + 1) % dots.length;
+    changeTestimonial(currentIndex);
+}, 5000);
+
+</script>
 </html>
