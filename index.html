@@ -127,7 +127,7 @@
                 <div class="course-list">
                     <!--course-item 1-->
                     <div class="course-item">
-                       <a href="#!"> <img src="./asset/img/idea.jpg" alt="Basic web design" class="thum"></a>
+                       <a href="#!"> <img src="./asset/img/idea.jpg" alt="Basic web design" class="thumb"></a>
                         <div class="info">
                             <div class="head">
                               <h3 class="title"><a href="#!" class="line-clamp beak-all"> Basic web design</a></h3>
@@ -289,24 +289,42 @@
                 </div>
             </div>
         </div>
+        <div class="blog">
+            <div class="content">
+                <div class="blog-top">
+                    <h2 class="heading lv2">Our blog</h2>
+                    <p class="desc">Read our regular travel blog and know the latest update of tour and travel</p>
+                </div>
+                <!--Blog item 1-->
+                <div class="blog-list">
+                    <div class="item">
+                        <a href="#!"><img src="./asset/img/blog1.avif" alt="How to become a pro web designer in 2022 and get remot job?" class="thumb"></a>
+                       <div class="info">
+                        <span class="date">21 November 2021</span>
+                        <h3 class="title"><a href="#!">How to become a pro web designer in 2022 and get remot job?</a></h3>
+                        <a href="#!" class="btn">Read More</a>
+                    </div>
+                    </div>
+                    <div class="item">
+                        <a href="#!"><img src="./asset/img/blog2.avif" alt="How to become a pro web designer in 2022 and get remot job?" class="thumb"></a>
+                      <div class="info">
+                        <span class="date">21 November 2021</span>
+                        <h3 class="title"><a href="#!">How to become a pro web designer in 2022 and get remot job?</a></h3>
+                        <a href="#!" class="btn">Read More</a>
+                    </div>
+                    </div>
+                <!--Blog item 3-->
+                    <div class="item">
+                        <a href="#!"><img src="./asset/img/blog3.avif" alt="How to become a pro web designer in 2022 and get remot job?" class="thumb"></a>
+                        <div class="info">
+                        <span class="date">21 November 2021</span>
+                        <h3 class="title"><a href="#!">How to become a pro web designer in 2022 and get remot job?</a></h3>
+                        <a href="#!" class="btn">Read More</a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        </div>
     </main>
 </body>
-<script>
-    let currentIndex = 0;
-    const feedbackList= document.querySelector('.feedback-list');
-    const dots = document.querySelectorAll('.dot');
-
-    function changeTestimonial(index) {
-        currentIndex = index;
-        feedbackList.style.transform = `translateX(-${index * 100}%)`;
-        
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentIndex].classList.add('active');
-    }
-    setInterval(() => {
-    currentIndex = (currentIndex + 1) % dots.length;
-    changeTestimonial(currentIndex);
-}, 5000);
-
-</script>
-</html>
+</html>blog
