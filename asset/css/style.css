@@ -556,3 +556,23 @@ a {
 .blog .item .btn:hover {
     background-color: var(--primary);
 }
+.blog .item .btn {
+    font-size: 1.4rem;
+}
+.blog .dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 38px;
+}
+.blog .dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #5F5B53;
+    cursor: pointer;
+}
+.blog .dot.act {
+    background-color: var(--primary);
+    cursor: default;
+}
