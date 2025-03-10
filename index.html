@@ -18,10 +18,10 @@
         <div class="body">
             <img src="./asset/img/logo.svg" alt="Lesson." class="logo">
     
-            <nav class="nav">
+            <nav class="nav" id="home">
                 <ul>
                     <li class="active">
-                        <a href="#!">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
                         <a href="#!">Courses</a>
@@ -30,13 +30,12 @@
                         <a href="#!">Pricing</a>
                     </li>
                     <li>
-                        <a href="#!">Reviews</a>
+                        <a href="#review">Reviews</a>
                     </li>
                 </ul>
             </nav>
             <!--Action-->
-    
-        <div class="action">
+        <div id="courses" class="action">
             <a href="#!" class="btn sign-up-btn">Sign Up</a>
         </div>
         </div>
@@ -289,7 +288,7 @@
                 </div>
             </div>
         </div>
-        <div class="blog">
+        <div id="review" class="blog">
             <div class="content">
                 <div class="blog-top">
                     <h2 class="heading lv2">Our blog</h2>
@@ -457,5 +456,23 @@
             </div>
         </div>
     </footer>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav li');
+    const activeItem = document.querySelector('.nav li.active');
+
+    navItems.forEach(item => {
+        item.addEventListener('mouseover', function() {
+            activeItem.classList.remove('active');
+            this.classList.add('active');
+        });
+
+        item.addEventListener('mouseout', function() {
+            this.classList.remove('active');
+            activeItem.classList.add('active');
+        });
+    });
+});
+    </script>
 </body>
 </html>
