@@ -18,16 +18,16 @@
         <div class="body">
             <img src="./asset/img/logo.svg" alt="Lesson." class="logo">
     
-            <nav class="nav" id="home">
+            <nav class="nav">
                 <ul>
-                    <li class="active">
+                    <li >
                         <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#!">Courses</a>
+                        <a href="#feedback">Feedback</a>
                     </li>
                     <li>
-                        <a href="#!">Pricing</a>
+                        <a href="#pro">Courses</a>
                     </li>
                     <li>
                         <a href="#review">Reviews</a>
@@ -44,7 +44,7 @@
    </header>
     <main>
         <!--Hero-->
-        <div class="hero">
+        <div class="hero" id="home">
             <div class="content">
                 <div class="body">
                       <div class="media-block">
@@ -182,7 +182,7 @@
             </div>
         </div>
        <!--feedback--> 
-        <div class="feedback">
+        <div class="feedback" id="feedback">
             <div class="content">
                 <div class="feedback-list">
                     <!--feedback-item 1"-->
@@ -254,7 +254,7 @@
             </div>
         </div>
         <!--Features 1-->
-        <div class="features">
+        <div class="features" id="pro" >
             <div class="content">
                 <div class="body">
                     <div class="images">
@@ -458,21 +458,18 @@
     </footer>
     <script>
        document.addEventListener('DOMContentLoaded', function() {
-    const navItems = document.querySelectorAll('.nav li');
-    const activeItem = document.querySelector('.nav li.active');
+            const navItems = document.querySelectorAll('.nav li a');
 
-    navItems.forEach(item => {
-        item.addEventListener('mouseover', function() {
-            activeItem.classList.remove('active');
-            this.classList.add('active');
+            navItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    const activeItem = document.querySelector('.nav li.active');
+                    if (activeItem) {
+                        activeItem.classList.remove('active');
+                    }
+                    this.parentElement.classList.add('active');
+                });
+            });
         });
-
-        item.addEventListener('mouseout', function() {
-            this.classList.remove('active');
-            activeItem.classList.add('active');
-        });
-    });
-});
     </script>
 </body>
 </html>
