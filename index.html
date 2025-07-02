@@ -457,19 +457,25 @@
         </div>
     </footer>
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
-            const navItems = document.querySelectorAll('.nav li a');
+     document.addEventListener('DOMContentLoaded', function() {
+    // Lấy tất cả các thẻ <a> bên trong các thẻ <li> của menu điều hướng
+    const navItems = document.querySelectorAll('.nav li a');
 
-            navItems.forEach(item => {
-                item.addEventListener('click', function(event) {
-                    const activeItem = document.querySelector('.nav li.active');
-                    if (activeItem) {
-                        activeItem.classList.remove('active');
-                    }
-                    this.parentElement.classList.add('active');
-                });
-            });
+    // Lặp qua từng mục menu
+    navItems.forEach(item => {
+        // Thêm sự kiện 'click' cho từng mục menu
+        item.addEventListener('click', function(event) {
+            // Tìm mục menu hiện tại đang có class 'active'
+            const activeItem = document.querySelector('.nav li.active');
+            if (activeItem) {
+                // Nếu có mục menu đang có class 'active', loại bỏ class 'active' khỏi mục đó
+                activeItem.classList.remove('active');
+            }
+            // Thêm class 'active' vào mục menu vừa được bấm
+            this.parentElement.classList.add('active');
         });
+    });
+});
     </script>
 </body>
 </html>
